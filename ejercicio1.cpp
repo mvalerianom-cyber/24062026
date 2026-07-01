@@ -39,6 +39,29 @@ int main(){
 	
 	for (int i = 1; i < cantidad; i++){
 		
-		if (listraEmpleados[i].sueldo > listra )
-	}
+		if (listaEmpleados[i].sueldo > listaEmpleados[indiceMayor].sueldo) {
+            indiceMayor = i;
+        }
+        // ¿Encontramos a alguien que gane menos?
+        if (listaEmpleados[i].sueldo < listaEmpleados[indiceMenor].sueldo) {
+            indiceMenor = i;
+        }
+    }
+
+    // 4. Mostrar los resultados exigidos
+    cout << "\n=======================================" << endl;
+    cout << "   RESULTADOS DE LA BUSQUEDA" << endl;
+    cout << "=======================================" << endl;
+
+    cout << "\n-> EMPLEADO CON MAYOR SUELDO:" << endl;
+    cout << "Nombre: " << listaEmpleados[indiceMayor].nombres << endl;
+    cout << "Sexo: " << listaEmpleados[indiceMayor].sexo << endl;
+    cout << "Sueldo: $" << listaEmpleados[indiceMayor].sueldo << endl;
+
+    cout << "\n-> EMPLEADO CON MENOR SUELDO:" << endl;
+    cout << "Nombre: " << listaEmpleados[indiceMenor].nombres << endl;
+    cout << "Sexo: " << listaEmpleados[indiceMenor].sexo << endl;
+    cout << "Sueldo: $" << listaEmpleados[indiceMenor].sueldo << endl;
+
+    return 0;
 }
